@@ -23,15 +23,25 @@ namespace AutoCompleteDemo {
 		public override void ViewDidLoad () {
 			base.ViewDidLoad ();
 
-			autoCompleteTable = new UITableView (new RectangleF (10, 80, 300, 120));
-			autoCompleteTable.ScrollEnabled = true;
-			autoCompleteTable.BackgroundColor = UIColor.Gray;
-			autoCompleteTable.SeparatorColor = UIColor.Blue;
-
-			autoCompleteTable.Hidden = true;
+			autoCompleteTable = new UITableView (new RectangleF (0,79,
+			                                                     UIScreen.MainScreen.Bounds.Width,
+			                                                     UIScreen.MainScreen.Bounds.Height-79))
+			{
+				AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | 
+					UIViewAutoresizing.FlexibleBottomMargin |
+					UIViewAutoresizing.FlexibleWidth,
+				ScrollEnabled = true,
+				BackgroundColor = UIColor.White,
+				SeparatorColor = UIColor.Gray,
+				Hidden = true
+			};
 
 			this.View.AddSubview(autoCompleteTable);
-
+			textInput.ShouldReturn = delegate
+			{
+				textInput.ResignFirstResponder();
+				return true;
+			};
 			textInput.ShouldChangeCharacters += (sender, something, e) => {
 				Thread autoCompleteThread = new Thread (() => {
 					UpdateSuggestions();
