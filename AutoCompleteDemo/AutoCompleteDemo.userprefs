@@ -1,11 +1,12 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoCompleteDemo/AutoCompleteDemoViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoCompleteDemo.userprefs">
     <Files>
-      <File FileName="AutoCompleteDemo/AutoCompleteDemoViewController.cs" Line="95" Column="17" />
-      <File FileName="AutoCompleteDemo/AutoCompleteTableSource.cs" Line="29" Column="4" />
+      <File FileName="AutoCompleteDemo/AutoCompleteDemoViewController.cs" Line="1" Column="1" />
+      <File FileName="AutoCompleteDemo/AutoCompleteTableSource.cs" Line="13" Column="3" />
       <File FileName="AutoCompleteDemo/Main.cs" Line="15" Column="2" />
       <File FileName="AutoCompleteDemo/AppDelegate.cs" Line="14" Column="84" />
+      <File FileName="AutoCompleteDemo.userprefs" Line="10" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
